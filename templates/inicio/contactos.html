@@ -1,0 +1,29 @@
+{%extends 'base.html'%}
+
+{%block titulo%} Contactos {%endblock%}
+
+{%block contenido%}
+
+    <h1>Contactos</h1>
+    <p>Contacto1</p>
+    <p>Contacto2</p>
+    <p>{{nombre}}</p>
+    <p>{{lista_numeros}}</p>
+    {%for x in lista_numeros%}
+
+        {%if x > 1500%}
+            <p>Numero supera el limite: {{x}}</p>
+        {%else%}
+            <p>Numero no supera el limite: {{x}}</p>
+        {%endif%}
+
+    {%endfor%}
+
+
+    {%if edad > 18%}
+        <p>Es mayor de edad</p>
+    {%else%}
+        <p>Es menor de edad</p>
+    {%endif%}
+
+{%endblock%}
